@@ -46,3 +46,13 @@ $('#owl-testmonial').owlCarousel({
     nav: true,
     dots: false
 })
+
+//Menu
+const menu_hamburguer = document.querySelector('.menu_hamburguer');
+const nav_list = document.querySelector('.header__nav--list');
+
+menu_hamburguer.addEventListener("click", ({currentTarget}) => {
+  const currentTargetChild = currentTarget.firstElementChild;
+  currentTargetChild.classList.toggle('active');
+  nav_list.classList.toggle('open');
+});
