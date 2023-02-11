@@ -11865,9 +11865,6 @@ pre .code {
 ul {
   list-style: none;
 }
-body {
-  font-family: monospace;
-}
 .menu_hamburguer {
   z-index: 10;
   position: absolute;
