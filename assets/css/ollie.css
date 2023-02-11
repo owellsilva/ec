@@ -11672,7 +11672,8 @@ pre .code {
 }
 
 .section {
-  padding: 60px 10px;
+  padding-top: 0;
+  padding-bottom: 20px;
 }
 
 .section:nth-child(odd) {
