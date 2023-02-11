@@ -11849,3 +11849,7 @@ pre .code {
   text-align: justify;
 }
 
+.tabla{
+  border-radius: 25px;
+  background-color: white;
+}
