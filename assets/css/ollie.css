@@ -11597,6 +11597,8 @@ pre .code {
   border-radius: 20px;
   margin: 15px 0;
   min-width: 120px;
+  background-color: #ff5b70 !important;
+  border: #ff5b70 solid 1px !important;
 }
 
 .header .carousel .carousel-caption {
