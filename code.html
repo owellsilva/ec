@@ -1,1 +1,113 @@
- 
+<div class="menu_hamburguer">
+    <span class="hamburguer_item"></span>
+  </div>
+  <div class="header__nav--list">
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Portfólio</li>
+      <li>Contato</li>
+    </ul>
+  </div>
+
+
+
+
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  ul {
+    list-style: none;
+  }
+  body {
+    font-family: monospace;
+  }
+  .menu_hamburguer {
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .hamburguer_item {
+    width: 30px;
+    height: 4px;
+    background: #DF2611;
+    transition: all 0.3s;
+  }
+  .hamburguer_item::before,
+  .hamburguer_item::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: #DF2611;
+    position: absolute;
+    margin-top: -10px;
+    transition: all 0.3s;
+  }
+  .hamburguer_item::after {
+    margin-top: 10px;
+  }
+  .hamburguer_item.active {
+    background: transparent;
+  }
+  .hamburguer_item.active::before,
+  .hamburguer_item.active::after  {
+    margin: 0px;
+    transform: rotate(45deg);
+  }
+  .hamburguer_item.active::after {
+    transform: rotate(-45deg);
+  }
+  .header__nav--list {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.7s;
+    clip-path: circle(0px at 100% 0);
+  }
+  .header__nav--list.open {
+    clip-path: circle(1500px at 100% 0);
+  }
+  .header__nav--list li {
+    color: #f3f3f3;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 5px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  const menu_hamburguer = document.querySelector('.menu_hamburguer');
+const nav_list = document.querySelector('.header__nav--list');
+
+menu_hamburguer.addEventListener("click", ({currentTarget}) => {
+  const currentTargetChild = currentTarget.firstElementChild;
+  currentTargetChild.classList.toggle('active');
+  nav_list.classList.toggle('open');
+});
