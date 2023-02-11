@@ -11296,7 +11296,7 @@ p {
 }
 
 .navbar.affix-top .nav-link {
-  color: #fff;
+  color: black;
 }
 
 .navbar.affix {
@@ -11850,6 +11850,9 @@ pre .code {
 }
 
 .tabla{
+  border-radius: 25px; 
+  text-align: center;
+  color: #000 !important;
+  background: #ff5b70;
   border-radius: 25px;
-  background-color: white;
 }
